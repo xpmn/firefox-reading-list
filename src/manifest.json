@@ -2,7 +2,7 @@
 
   "manifest_version": 2,
   "name": "Reading List",
-  "version": "0.1",
+  "version": "0.2",
 
   "description": "Adds a reading list button",
   "homepage_url": "https://github.com/rewkha/firefox-reading-list",
@@ -16,8 +16,19 @@
     "storage"
   ],
 
+  "sidebar_action": {
+    "browser_style": false,
+    "default_title": "Reading List",
+    "default_panel": "sidebar/sidebar.html",
+    "default_icon": "icons/icon-128.png"
+    }, 
   "browser_action": {
     "default_icon": "icons/icon-128.png",
+    "theme_icons": [{
+      "light": "icons/icon-128.png",
+      "dark": "icons/icon-128-dark.png",
+      "size": 19
+    }],
     "default_title": "Reading List",
     "default_popup": "popup/added.html"
   }
