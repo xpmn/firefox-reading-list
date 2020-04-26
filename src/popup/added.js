@@ -19,7 +19,7 @@ function toggleAddPageToList(tabs) {
           list = list.filter(savedPage => savedPage.url !== tabs[0].url);
           document.querySelector("#popup-content").textContent = 'Page is removed from reading list!';
         } else {
-          list.push({url: tabs[0].url, favIconUrl: tabs[0].favIconUrl, title: tabs[0].title});
+          list.push({url: tabs[0].url, faviconUrl: tabs[0].favIconUrl, title: tabs[0].title});
           document.querySelector("#popup-content").textContent ='Page is added to reading list!';
         }
         browser.storage.local.set({readingList: list});

@@ -5,13 +5,52 @@
     <meta charset="utf-8">
 
     <style>
-      #popup-content {
-        color: black;
-        padding: 10px;
+      body {
+        padding: 0;
+        margin: 0;
+        background-image: linear-gradient(to right, #cccdd0 , #d6d7da);
+      }
+      #sidebar-content{
+        padding: 10px 0;
       }
       .sidebar-item {
-        display: block;
-        margin-bottom: 10px;
+        display: flex;
+        width: 100%;
+        font-size: 13px;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 4px 10px;
+        box-sizing: border-box;
+        height: 27px;
+        align-items: center;
+      }
+      .sidebar-item:hover {
+        background: #c0c2c5;
+      }
+      .item-icon {
+        width: 16px;
+        margin-right: 10px;
+        flex-shrink: 0;
+      }
+      .item-link {
+        display: flex;
+        width: calc(100% - 16px);
+        white-space: nowrap;
+        color: black;
+        text-decoration: none;
+        align-items: end;
+      }
+      .item-link span {
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .item-remover {
+        width: 16px;
+        cursor: pointer;
+      }
+      .item-remover:hover {
+        background: #f87171;
+        border-radius: 8px;
       }
     </style>
   </head>
