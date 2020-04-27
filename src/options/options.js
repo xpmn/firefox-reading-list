@@ -13,6 +13,7 @@ document.getElementById('theme').addEventListener('click', (e) => {
       theme
     }
   });
+  document.body.className = theme;
   browser.browserAction.setIcon({
     path: `/icons/icon-${prefix}.svg`
   });

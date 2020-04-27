@@ -1,6 +1,4 @@
-function getCurrentList() {
-  return browser.storage.local.get('readingList').then(store => ((store.readingList && store.readingList.length) ? store.readingList : []));
-}
+import {getThemedPrefix, getCurrentList} from '../lib.js';
 
 function createNewItemElement(item) {
   const elWrapper = document.createElement('div');
@@ -21,9 +19,11 @@ function createNewItemElement(item) {
   innerTitle.appendChild(document.createTextNode(item.title));
   link.appendChild(innerTitle);
 
-  const removeItem = document.createElement('img');
+  const removeIcon = document.createElement('img');
+  removeIcon.src = '/icons/close.svg';
+  const removeItem = document.createElement('a');
   removeItem.className = 'item-remover';
-  removeItem.src = '/icons/close.svg';
+  removeItem.appendChild(removeIcon);
 
   removeItem.addEventListener('click', () => {
     getCurrentList().then((list) => {
@@ -39,6 +39,9 @@ function createNewItemElement(item) {
 }
 
 function updateStyles() {
+  getThemedPrefix().then(prefix => {
+    document.body.className = prefix === 'light' ? 'dark' : 'light';
+  });
   return browser.theme.getCurrent().then((themeInfo) => {
     if (themeInfo.colors) {
       if (themeInfo.colors.sidebar) {

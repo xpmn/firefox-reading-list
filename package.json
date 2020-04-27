@@ -1,0 +1,20 @@
+{
+  "name": "reading-list",
+  "version": "0.4.0",
+  "description": "Small firefox extension",
+  "main": "src/manifest.json",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rewkha/firefox-reading-list.git"
+  },
+  "author": "rewkha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rewkha/firefox-reading-list/issues"
+  },
+  "homepage": "https://github.com/rewkha/firefox-reading-list",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1"
+  }
+}

@@ -13,6 +13,9 @@
       body.dark {
         background: #38383d;
       }
+      body.dark .item-link {
+        color: #f9f9fa;
+      }
       #sidebar-content{
         padding: 10px 0;
       }
@@ -22,7 +25,7 @@
         font-size: 13px;
         color: black;
         font-family: Arial, Helvetica, sans-serif;
-        padding: 0 10px 0 0;
+        padding: 0 5px 0 0;
         box-sizing: border-box;
         height: 27px;
         align-items: center;
@@ -37,7 +40,7 @@
       }
       .item-link {
         display: flex;
-        width: calc(100% - 16px);
+        width: calc(100% - 26px);
         white-space: nowrap;
         color: black;
         text-decoration: none;
@@ -49,12 +52,19 @@
         overflow: hidden;
       }
       .item-remover {
-        width: 16px;
+        width: 26px;
         cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0px 4px;
       }
-      .item-remover:hover {
+      .item-remover img {
+        width: 100%;
+      }
+      .item-remover:hover img{
         background: #f87171;
-        border-radius: 8px;
+        border-radius: 10px;
       }
     </style>
   </head>
@@ -62,7 +72,7 @@
   <body>
     <div id="sidebar-content">
     </div>
-    <script src="sidebar.js"></script>
+    <script type="module" src="sidebar.js"></script>
   </body>
 
 </html>
