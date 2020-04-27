@@ -12,7 +12,7 @@ function addPageToList(tab) {
         browser.storage.local.set({ readingList: list });
       } else {
         const url = getUrlElement(tab.url);
-        document.querySelector('#action-content').innerHTML = `Extension does not support the <b>'${url.protocol}'</b> protocol.`;
+        document.querySelector('#action-content').textContent = `Extension does not support the '${url.protocol}' protocol.`;
         console.log(`Extension does not support the '${tab.url}' URL.`);
       }
     });

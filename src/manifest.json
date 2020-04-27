@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Reading List",
-  "version": "0.4",
+  "version": "0.4.1",
   "description": "Adds a reading list button",
   "homepage_url": "https://github.com/rewkha/firefox-reading-list",
   "icons": {
