@@ -28,7 +28,7 @@ function createNewItemElement(item) {
   removeItem.addEventListener('click', () => {
     getCurrentList().then((list) => {
       list = list.filter(savedPage => savedPage.url !== item.url);
-      browser.storage.local.set({ readingList: list });
+      browser.storage.sync.set({ readingList: list });
       renderList();
     });
   });

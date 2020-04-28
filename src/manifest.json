@@ -1,7 +1,13 @@
 {
   "manifest_version": 2,
   "name": "Reading List",
-  "version": "0.4.1",
+  "version": "0.5.0",
+  "applications": {
+    "gecko": {
+      "id": "microreadinglist@rewkha.dev",
+      "strict_min_version": "67.0"
+    }
+  },
   "description": "Adds a reading list button",
   "homepage_url": "https://github.com/rewkha/firefox-reading-list",
   "icons": {
