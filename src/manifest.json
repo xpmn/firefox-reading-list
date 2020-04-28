@@ -1,11 +1,11 @@
 {
   "manifest_version": 2,
   "name": "Reading List",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "applications": {
     "gecko": {
-      "id": "microreadinglist@rewkha.dev",
-      "strict_min_version": "67.0"
+      "id": "{7d1ebca6-ebf2-4bb5-bf10-b28a1892245e}",
+      "strict_min_version": "73.0"
     }
   },
   "description": "Adds a reading list button",
