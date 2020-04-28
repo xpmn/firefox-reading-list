@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Reading List",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "applications": {
     "gecko": {
       "id": "{7d1ebca6-ebf2-4bb5-bf10-b28a1892245e}",

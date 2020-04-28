@@ -29,7 +29,6 @@ function createNewItemElement(item) {
     getCurrentList().then((list) => {
       list = list.filter(savedPage => savedPage.url !== item.url);
       browser.storage.sync.set({ readingList: list });
-      renderList();
     });
   });
 
