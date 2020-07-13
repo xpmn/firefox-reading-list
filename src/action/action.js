@@ -9,7 +9,7 @@ function addPageToList(tab) {
         }
         list.unshift({ url: tab.url, faviconUrl: tab.favIconUrl, title: tab.title });
         setReadingItemIcon(true, tab.id);
-        browser.storage.sync.set({ readingList: list });
+        browser.storage.local.set({ readingList: list });
       } else {
         const url = getUrlElement(tab.url);
         document.querySelector('#action-content').textContent = `Extension does not support the '${url.protocol}' protocol.`;

@@ -29,5 +29,5 @@ export function getUrlElement(urlString) {
 }
 
 export function getCurrentList() {
-  return browser.storage.sync.get('readingList').then(store => ((store.readingList && store.readingList.length) ? store.readingList : []));
+  return browser.storage.local.get('readingList').then(store => ((store.readingList && store.readingList.length) ? store.readingList : []));
 }

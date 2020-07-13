@@ -10,6 +10,13 @@ function displayPageActionIcon(tabId, tab) {
 }
 
 function init() {
+  // Fix for sync storage limits: moving to local storage
+  browser.storage.sync.get('readingList').then(store => {
+    if (store.readingList) {
+      browser.storage.local.set({ readingList: store.readingList });
+    }
+    browser.storage.sync.clear();
+  });
   getThemedPrefix().then((prefix) => {
     browser.browserAction.setIcon({
       path: `/icons/icon-${prefix}.svg`
